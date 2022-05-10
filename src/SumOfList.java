@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class SumOfList {
     public static void main(String[] args) {
+
         System.out.println("Enter some integers");
         ArrayList list = new ArrayList<>();
-        int sum = 0;
-        for (int i = 0; i < list.size() + 1; i++) {
+            for (int i = 0; i < list.size() + 1; i++) {
             Scanner scanner = new Scanner(System.in);
             int next = scanner.nextInt();
             if ((next == 0)) {
@@ -17,13 +17,26 @@ public class SumOfList {
                         System.out.print("and " + list.get(u) + " were the items in the list. ");
                     }
                 }
-                for (int z = 0; z < list.size(); z++) {
-                    sum += (int) list.get(z);
-                }
-                System.out.println("The sum of all these is: " + sum);
-                break;
             }
+
             list.add(next);
+
+            }
+
+            add(list);
+
+        }
+
+        public static void add (ArrayList<Integer>list) {
+            int sum = 0;
+        for (int z = 0; z < list.size(); z++) {
+             sum += (int) list.get(z);
+            System.out.println("The sum of all these is: " + sum);
+
+        }
+
+
         }
     }
-}
+
+
